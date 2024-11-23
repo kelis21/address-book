@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>通讯录</title>
+    <link rel="stylesheet" href="./page/content/index.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>通讯录</h1>
+        <form id="contact-form">
+            <div>
+                <label for="name">姓名:</label>
+                <input type="text" id="name" required>
+            </div>
+            <div>
+                <label for="phone">电话号码:</label>
+                <input type="tel" id="phone" required>
+            </div>
+            <div>
+                <label for="email">电子邮件:</label>
+                <input type="email" id="email">
+            </div>
+            <div>
+                <label for="address">地址:</label>
+                <input type="text" id="address">
+            </div>
+            <div>
+                <button type="submit">添加联系人</button>
+            </div>
+        </form>
+
+    </div>
+    <div class="message">
+        <h1>通讯录</h1>
+        <h2>联系人列表</h2>
+        <ul id="contact-list"></ul>
+        <div>
+            <button id="export-contacts-btn">导出</button>
+        </div>
+        <div>
+            <input type="file" id="fileInput" accept=".xlsx, .xls" />
+            <button onclick="readFile()" id="import-contacts-btn">导入</button>
+            <pre id="output"></pre>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.2/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <script src="./page/content/index.js"></script>
+
+</body>
+
+</html>
